@@ -1,0 +1,34 @@
+{
+    "loginData": [
+      {
+        "scenario": "validLogin",
+        "username": "standard_user",
+        "password": "secret_sauce"
+      },
+      {
+        "scenario": "emptyPassword",
+        "username": "standard_user",
+        "password": ""
+      },
+      {
+        "scenario": "emptyUsername",
+        "username": " ",
+        "password": "secret_sauce"
+      },
+      {
+        "scenario": "emptyForm",
+        "username": "",
+        "password": ""
+      }
+
+    ],
+    "checkoutInformation": [
+      {
+        "scenario": "successfulcheckout",
+        "fisrtaname": "John",
+        "lastname": "Doe",
+        "postalcode": "12345"
+      }
+    ]
+  }
+  
