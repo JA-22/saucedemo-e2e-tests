@@ -1,16 +1,9 @@
-// @ts-check
-const { defineConfig, devices } = require('@playwright/test');
-
-/**
- * Read environment variables from file.
- * https://github.com/motdotla/dotenv
- */
-// require('dotenv').config({ path: path.resolve(__dirname, '.env') });
+import { defineConfig, devices } from '@playwright/test';
 
 /**
  * @see https://playwright.dev/docs/test-configuration
  */
-module.exports = defineConfig({
+export default defineConfig({
   testDir: './tests',
   /* Run tests in files in parallel */
   fullyParallel: false,
@@ -31,23 +24,20 @@ module.exports = defineConfig({
     trace: 'on-first-retry',
 
     /* Disable headless mode to see the browser */
-   // headless: false,
-
+    // headless: false,
   },
 
   /* Configure projects for major browsers */
   projects: [
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] , headless: false },
+      use: { ...devices['Desktop Chrome'], headless: false },
     },
-   
-
+    // Uncomment if needed:
     // {
     //   name: 'webkit',
     //   use: { ...devices['Desktop Safari'] },
     // },
-
     /* Test against mobile viewports. */
     // {
     //   name: 'Mobile Chrome',
@@ -57,7 +47,6 @@ module.exports = defineConfig({
     //   name: 'Mobile Safari',
     //   use: { ...devices['iPhone 12'] },
     // },
-
     /* Test against branded browsers. */
     // {
     //   name: 'Microsoft Edge',

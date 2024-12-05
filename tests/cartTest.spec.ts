@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
-import { ProductsPage } from '../pages/products.Page';
-import { getAccessData, login } from '../utils/loginHelper';
-import { LoginPage } from '../pages/login.Page';
+import { ProductsPage } from '../pages/Products.Page';
+import { getAccessData, login } from './helpers/sessionHelper';
+import { LoginPage } from '../pages/Login.Page';
 
 test('Add an item to the cart', async ({ page }) => {
   const loginPage = new LoginPage(page);

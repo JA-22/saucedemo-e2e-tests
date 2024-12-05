@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
-import { login, getAccessData } from '../utils/loginHelper';
-import { LoginPage } from '../pages/login.Page';
+import { login, getAccessData } from './helpers/sessionHelper';
+import { LoginPage } from '../pages/Login.Page';
 
 test('Successful registration with valid data', async ({ page }) => {
   const loginPage = new LoginPage(page);
