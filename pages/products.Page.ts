@@ -11,7 +11,6 @@ export class ProductsPage {
     return {
       addToBtn: this.page.locator('#add-to-cart-sauce-labs-backpack'),
       removeBtn: this.page.locator('#remove-sauce-labs-backpack'),
-      //backToProductsLink: this.page.locator('#back-to-products'),
       backpackTitle: this.page.locator('#item_4_title_link > div'),
       containerCart: this.page.locator('#shopping_cart_container > a > span')
     };
