@@ -1,10 +1,10 @@
 import { test, expect } from '@playwright/test';
-import { CartPage } from '../pages/Cart.Page';
-import { ProductsPage } from '../pages/Products.Page';
-import { CheckoutPage } from '../pages/Checkout.Page';
+import { CartPage } from '../pages/cart.Page';
+import { ProductsPage } from '../pages/products.Page';
+import { CheckoutPage } from '../pages/checkout.Page';
 import { getAccessData, login } from './helpers/sessionHelper';
 import testData from '../data/testData.json';
-import { LoginPage } from '../pages/Login.Page';
+import { LoginPage } from '../pages/login.Page';
 
 test('Verify Checkout Process', async ({ page }) => {
   const cartPage = new CartPage(page);
