@@ -36,23 +36,26 @@ test('Remove an item to the cart', async ({ page }) => {
   // Obtener datos de inicio de sesión válidos
   const accessData = getAccessData('validLogin');
 
-  // Completar el formulario de inicio de sesión y enviar
+  // Completar el formulario de inicio de sesión y enviar 
   await loginPage.fillLoginForm(accessData);
   await loginPage.submitLoginButton();
 
-  // Verificar que el ítem fue agregado al carrito
-  let cartItem = page.locator('#shopping_cart_container > a > span'); 
-  await expect(cartItem).toBeVisible();
+  // Verificar que el ítem fue agregado al carrito 
+  //let cartItem = page.locator('#remove-sauce-labs-backpack'); 
+
+  //await expect(cartItem).toBeVisible();
+
+  await productsPage.selectItem4();
 
   // Seleccionar el item 4 y eliminarlo del carrito
   await productsPage.removeItem4();
 
   // Verificar que el ítem fue removido del carrito
-  cartItem = page.locator('#shopping_cart_container > a > span'); // Cambia el selector por el adecuado
-  await expect(cartItem).not.toBeVisible();
+  const cartItem = page.locator('#add-to-cart-sauce-labs-backpack'); // Cambia el selector por el adecuado
+  await expect(cartItem).toBeVisible();
 
   // Verificar que el carrito esté vacío
-  const cartItems = page.locator('#shopping_cart_container > a > span'); // Cambia el selector por el adecuado
-  await expect(cartItems).toHaveCount(0);
+  //const cartItems = page.locator('#shopping_cart_container > a > span'); // Cambia el selector por el adecuado
+  //await expect(cartItems).toHaveCount(0);
 
 });

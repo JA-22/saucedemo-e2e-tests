@@ -27,7 +27,7 @@ export class ProductsPage {
 
   async removeItem4(): Promise<void> {
     try {
-      await this.elements.backpackTitle.waitFor({ state: 'visible' });
+      await this.elements.removeBtn.waitFor({ state: 'visible' });
         await this.elements.removeBtn.click();
     } catch (error) {
       console.error('Error al seleccionar el item 4:', error);
