@@ -24,7 +24,7 @@ export default defineConfig({
     trace: 'on-first-retry',
 
     /* Disable headless mode to see the browser */
-    // headless: false,
+     headless: true,
   },
 
   /* Configure projects for major browsers */
