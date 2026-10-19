@@ -5,4 +5,5 @@ test('Smoke test: login page loads', async ({ page }) => {
 
   await expect(page).toHaveTitle('Swag Labs');
   await expect(page.locator('[data-test="username"]')).toBeVisible();
+  await expect(page.locator('[data-test="password"]')).toBeVisible();
 });
